@@ -1,14 +1,16 @@
-import { RouteObject } from "react-router-dom";
 import { Home, NotFound } from "./pages";
+import { Route } from "./types";
 
-const routes: RouteObject[] = [
+const routes: Route[] = [
   {
     path: "/",
-    element: <Home />,
+    component: <Home />,
+    isRequireLogin: false,
   },
   {
     path: "*",
-    element: <NotFound />,
+    component: <NotFound />,
+    isRequireLogin: false,
   },
 ];
 
